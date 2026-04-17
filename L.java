@@ -16,17 +16,23 @@ class savings extends withdraw{
     }
 }
 class fixedDeposit extends account{
-    void withdraw(int amount){
-        System.out.println("you cannot withdraw from fixed deposit");
-    }
+    
+}
+class BankClient{
+    private account a;
+    public BankClient(account a){
+        this.a=a;
+    }  
+    public void deposit(int balance){
+        a.deposit(balance);
+    } 
+
 }
 public class L{
      public static void main(String[] args) {
-        savings s =new savings();
-        s.deposit(1000); 
-        s.withdraw(500);
-        fixedDeposit f=new fixedDeposit();  
-        f.deposit(1000);
-        f.withdraw(500); 
+        BankClient bc=new BankClient(new savings());
+        bc.deposit(1000);
+        BankClient bc1=new BankClient(new fixedDeposit());
+        bc1.deposit(500);
      }
 }
