@@ -1,4 +1,4 @@
-//studying strategic design patterns with example of robot and its functions.
+//studying strategic design patterns with example of robot and its functions.Uisng Composition instead of inheritance to achieve flexibility and reusability of code.
 
 interface  walkable{
     void walk();
