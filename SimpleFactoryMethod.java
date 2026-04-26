@@ -22,7 +22,7 @@ class kingBurger implements burger{
     }
 }
 class BurgerFcatory{
-    public static burger createBurger(String type){
+    public  burger createBurger(String type){
         if(type.equalsIgnoreCase("simple")){
             return new SimpleBurger();
         }else if(type.equalsIgnoreCase("standard")){
